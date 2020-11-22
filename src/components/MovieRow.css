@@ -1,0 +1,14 @@
+.movieRow{
+    margin-bottom: 30px;
+}
+
+.movieRow h2{
+    /* margin: 0px,0px,0px,30px; */
+    margin-left: 20px;
+    background-color: red;
+}
+
+
+.movieRow--item{
+    display: inline-block;
+}
