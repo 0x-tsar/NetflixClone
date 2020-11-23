@@ -1,14 +1,81 @@
 .movieRow{
     margin-bottom: 30px;
+    margin-bottom: 20px;
+
 }
 
 .movieRow h2{
     /* margin: 0px,0px,0px,30px; */
     margin-left: 20px;
-    background-color: red;
 }
+
+.movieRow--listarea{
+    overflow-x: hidden;
+}
+
+.movieRow--list{
+    /* width: 99999px; */
+    overflow-y: hidden;
+    transition: all ease .3s;
+}
+
+
+
 
 
 .movieRow--item{
     display: inline-block;
+    padding: 5px;
+    transform: scale(0.95);
+    cursor: pointer;
+    text-decoration: none;
 }
+
+.movieRow--item:hover{
+    transform: scale(1.02);
+    transition: all ease 0.3s;
+}
+
+
+.movieRow-left, .movieRow-right{
+    position: absolute;
+    width: 60px;
+    height: 450px;
+    background-color: rgba(0, 0, 0, 0.400); 
+    margin-top: 5px;
+    z-index: 10;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.movieRow-left{
+    left: 0;
+}
+
+.movieRow-right{
+    right: 0;
+}
+
+
+/* .movieRow-left:hover, .movieRow-right:hover{
+    background-color: rgba(0, 0, 0, 0.700);
+    transition: ease all 0.2s;
+} */
+
+/* .movieRow--listarea:hover .movieRow--left{
+    opacity: 1;
+    background-color: red;
+} */
+
+
+.movieRow:hover .movieRow-left,
+.movieRow:hover .movieRow-right{
+    opacity: 1;
+    transition: ease all .3s;
+}
+
