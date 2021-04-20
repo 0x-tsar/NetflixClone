@@ -24,6 +24,10 @@ export default ({title, items}) =>{
     }
 
 
+    const handleMovie = (item)=>{
+        console.log(item)
+    }
+
 
     return (
         <div className='movieRow'>
@@ -43,7 +47,7 @@ export default ({title, items}) =>{
                     width: items.results.length * 285 * 5
                 }}>
                     {items.results.length > 0 && items.results.map((item, key)=>(
-                        <div key={key} className="movieRow--item">
+                        <div key={key} className="movieRow--item" onClick={handleMovie}>
 
                             <img src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} alt={item.original_title}  key={key}/>
                         </div>                        
