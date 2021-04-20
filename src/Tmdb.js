@@ -12,12 +12,9 @@ const API_BASE = 'https://api.themoviedb.org/3'
 -documentarios
 */
 
-const basicFetch = async(endpoint)=>{
-    if(endpoint.includes('original')){
-        console.log(endpoint);
+// https://image.tmdb.org/t/p/original/undefined
 
-    }
-    
+const basicFetch = async(endpoint)=>{
     const req = await fetch(`${API_BASE}${endpoint}`)
     const json = await req.json()
     return json

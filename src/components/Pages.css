@@ -1,0 +1,11 @@
+body{
+}
+
+.number{
+    cursor: pointer;
+    transform: scale(1);
+}
+
+.number:hover{
+    transform: scale(1.1);
+}

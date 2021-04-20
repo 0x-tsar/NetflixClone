@@ -4,33 +4,27 @@ import './FeatureMovie.css'
 export default ({item}) =>{
     let first_date = new Date(item.first_air_date)
     
-    
     let genders = []
     for(let i in item.genres){
         genders.push(item.genres[i].name)
     }
 
     let description = item.overview
+
     if(description){
         description = description.substring(0,200);
 
         if(description[description.length-1] === '.'){
             description = description
-            console.log('1')
         }
         else if(description[description.length-1] === '...'){
             description = description.substring(0,200)+''
-            console.log('3')
         }
         else if(description[description.length-1] === ' '){
             description = description.substring(0,200)+'...'
-            console.log('2')
-
         }
         else{
             description = description.substring(0,200)+'...'
-            console.log('4')
-
         }
     }
     
@@ -61,7 +55,7 @@ export default ({item}) =>{
                     
                     <div className="featured--buttons">
                         <a href={`/watch/${item.id}`} className="featured--assistir">► Watch</a>
-                        <a href={`/list/add/${item.id}`} className="featured--lista">+My List</a>
+                        <a href={`/list/add/${item.id}`} className="featured--lista">+ My List</a>
                     </div>
                     <div className="featured--gender"><strong>{genders.join(', ')}</strong>
                     </div>
